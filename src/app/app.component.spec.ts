@@ -1,29 +1,14 @@
-import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {render, screen} from '@testing-library/angular';
+import {within} from "@testing-library/dom";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
-    }).compileComponents();
+    await render(AppComponent);
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have the 'configuring-jest' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('configuring-jest');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, configuring-jest');
+  it('should display title', () => {
+    const title = screen.getByLabelText('title');
+    expect(within(title).getByText('Hello, configuring-jest')).toBeInTheDocument();
   });
 });
