@@ -1,11 +1,11 @@
-# Configuring Jest with Testing-Library and Jest-Dom
+# Configuring Jest with Testing-Library and Jest-Dom 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
-And it uses `@angular-devkit/build-angular:browser` builder i.e. in `angular.json`, it is configured as:
+And it uses `@angular-builders/jest:run` test builder i.e. in `angular.json`, it is configured as:
 ```
   "architect": {
-    "build": {
-      "builder": "@angular-devkit/build-angular:browser"
+    "test": {
+      "builder": "@angular-builders/jest:run",
     }
   }
 ```

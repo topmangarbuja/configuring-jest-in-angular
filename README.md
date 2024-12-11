@@ -1,26 +1,55 @@
-# Configuring Jest with Testing-Library and Jest-Dom
+# Configuring Jest with Testing-Library and Jest-Dom in Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
-And it doesn't use a test builder i.e. in `angular.json`, there is no test target configured.
-```
+These projects were generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+
+There are two apps available. One app uses `@angular-builders/jest:run` test builder and the other doesn't.
+
+### 1. configure-jest-with-angular-builders-jest
+- It uses `@angular-builders/jest:run` test builder i.e. in `angular.json`, it is configured as:
+  ```
   "architect": {
-    //This test section doesn't exist
-    "test": {}
+    "test": {
+      "builder": "@angular-builders/jest:run",
+    }
   }
-```
+  ```
+- `package.json` looks as below:
+  ```
+  {
+    "scripts": {
+      "test": "ng test"
+    }
+  }
+  
+### 2. configure-jest-without-angular-builders-jest
+- It doesn't use a test builder i.e. in `angular.json`, there is no test target configured.
+  ```
+    "architect": {
+      //This test section doesn't exist
+      "test": {}
+    }
+  ```
+- Instead, it uses `jest` command itself which is configured in `package.json` as:
+  ```
+  {
+    "scripts": {
+      "test": "jest"
+    }
+  }
+  ```
 
 This project configures testing framework jest along with testing-library. The default testing framework Jasmine and test runner Karma are removed.
-- Jest: 
-  - Jest is a delightful JavaScript Testing Framework with a focus on simplicity. 
+- Jest:
+  - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
   - Reference: https://jestjs.io/, https://github.com/jestjs/jest
-- Testing Library: 
-  - Simple and complete testing utilities. 
+- Testing Library:
+  - Simple and complete testing utilities.
   - It helps to test UI focusing on the behaviour (how users actually uses in browser) and avoids including implementation details.
-  - It provides functions and api such as render(), screen, getBy queries, user actions etc. 
+  - It provides functions and api such as render(), screen, getBy queries, user actions etc.
   - Reference: https://testing-library.com/, https://github.com/testing-library/angular-testing-library
-- Testing Library Jest-Dom: 
+- Testing Library Jest-Dom:
   - It provides custom DOM element matchers for Jest such as toBeInTheDocument(), toBeVisible() etc.
-  - These will make tests more declarative, clear to read and to maintain. 
+  - These will make tests more declarative, clear to read and to maintain.
   - Reference: https://testing-library.com/docs/ecosystem-jest-dom/, https://github.com/testing-library/jest-dom
 
 ## Setup
