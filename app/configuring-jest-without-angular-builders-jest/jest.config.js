@@ -1,8 +1,9 @@
 /** @type {import('jest').Config} */
 const config = {
-  verbose: true,
   collectCoverage: true,
-  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts']
+  preset: "jest-preset-angular",
+  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
+  verbose: true
 };
 
 module.exports = config;
