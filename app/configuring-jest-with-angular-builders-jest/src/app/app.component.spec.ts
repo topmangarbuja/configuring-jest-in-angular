@@ -9,6 +9,6 @@ describe('AppComponent', () => {
 
   it('should display title', () => {
     const title = screen.getByLabelText('title');
-    expect(within(title).getByText('Hello, configuring-jest')).toBeInTheDocument();
+    expect(within(title).getByText('Hello, configuring-jest-with-angular-builders-jest')).toBeInTheDocument();
   });
 });

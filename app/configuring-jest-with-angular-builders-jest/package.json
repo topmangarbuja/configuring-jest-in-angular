@@ -1,5 +1,5 @@
 {
-  "name": "configuring-jest",
+  "name": "configuring-jest-with-angular-builders-jest",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
