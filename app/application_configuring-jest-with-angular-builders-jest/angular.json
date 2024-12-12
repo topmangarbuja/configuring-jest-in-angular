@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "configuring-jest-with-angular-builders-jest": {
+    "application_configuring-jest-with-angular-builders-jest": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/configuring-jest-with-angular-builders-jest",
+            "outputPath": "dist/application_configuring-jest-with-angular-builders-jest",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "configuring-jest-with-angular-builders-jest:build:production"
+              "buildTarget": "application_configuring-jest-with-angular-builders-jest:build:production"
             },
             "development": {
-              "buildTarget": "configuring-jest-with-angular-builders-jest:build:development"
+              "buildTarget": "application_configuring-jest-with-angular-builders-jest:build:development"
             }
           },
           "defaultConfiguration": "development"

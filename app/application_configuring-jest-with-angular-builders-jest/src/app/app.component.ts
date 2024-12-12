@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'configuring-jest-with-angular-builders-jest';
+  title = 'application_configuring-jest-with-angular-builders-jest';
 }
