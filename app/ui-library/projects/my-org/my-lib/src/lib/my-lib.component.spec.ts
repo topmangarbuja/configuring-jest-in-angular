@@ -1,23 +1,13 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MyLibComponent } from './my-lib.component';
+import {render, screen, within} from "@testing-library/angular";
 
 describe('MyLibComponent', () => {
-  let component: MyLibComponent;
-  let fixture: ComponentFixture<MyLibComponent>;
-
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [MyLibComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(MyLibComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    await render(MyLibComponent);
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should display title', () => {
+    const title = screen.getByLabelText('title');
+    expect(within(title).getByText('my-lib works!')).toBeInTheDocument();
   });
 });
