@@ -20,6 +20,7 @@ There are two apps and two library projects available. One app and library uses 
       "test": "ng test"
     }
   }
+  ```
   
 ### 2. application_configuring-jest-without-angular-builders-jest
 - It doesn't use a test builder i.e. in `angular.json`, there is no test target configured.
@@ -42,7 +43,7 @@ There are two apps and two library projects available. One app and library uses 
 - Similar configuration to **(1)** `application_configuring-jest-with-angular-builders-jest`
   
 ### 4. library_configuring-jest-without-angular-builders-jest
-- Similar to **(2)** `application_configuring-jest-without-angular-builders-jest` with a small changes in the `package.json` as:
+- Similar configuration to **(2)** `application_configuring-jest-without-angular-builders-jest` with a small change in the `package.json` as:
   ```
   {
     "scripts": {
@@ -68,17 +69,9 @@ This project configures testing framework jest along with testing-library. The d
 ## Setup
 While setting up jest, changes required are made in `angular.json, package.json, jest.config.js, setup-jest.ts, tsconfig.spec.json,`
 
-After setting up jest, changes are made in `app.component.spec.ts` to use testing-library apis and jest-dom matchers.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+After setting up jest, changes are made in `app.component.spec.ts` and `my-lib.component.spec.ts` to use testing-library apis and jest-dom matchers.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Jest](https://github.com/jestjs/jest).
+Run `npm run test` within each of the project root folders to execute the unit tests via [Jest](https://github.com/jestjs/jest).
 
