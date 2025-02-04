@@ -1,13 +1,21 @@
-# Configuring Jest with Testing-Library and Jest-Dom
+# Configuring Jest without using test builder in application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
-And it doesn't use a test builder i.e. in `angular.json`, there is no test target configured.
-```
-  "architect": {
-    //This test section doesn't exist
-    "test": {}
+- It doesn't use a test builder i.e. in `angular.json`, there is no test target configured.
+  ```
+    "architect": {
+      //This test section doesn't exist
+      "test": {}
+    }
+  ```
+- Instead, it uses `jest` command itself which is configured in `package.json` as:
+  ```
+  {
+    "scripts": {
+      "test": "jest"
+    }
   }
-```
+  ```
 
 This project configures testing framework jest along with testing-library. The default testing framework Jasmine and test runner Karma are removed.
 - Jest: 
@@ -38,5 +46,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Jest](https://github.com/jestjs/jest).
+Run `npm run test` to execute the unit tests via [Jest](https://github.com/jestjs/jest).
 

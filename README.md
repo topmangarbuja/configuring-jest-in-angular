@@ -1,10 +1,10 @@
-# Configuring Jest with Testing-Library and Jest-Dom in Angular
+# Configuring Jest with Testing-Library and Jest-Dom in Angular app and library
 
 These projects were generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 
-There are two apps available. One app uses `@angular-builders/jest:run` test builder and the other doesn't.
+There are two apps and two library projects available. One app and library uses `@angular-builders/jest:run` test builder and the other two don't.
 
-### 1. configure-jest-with-angular-builders-jest
+### 1. application_configuring-jest-with-angular-builders-jest
 - It uses `@angular-builders/jest:run` test builder i.e. in `angular.json`, it is configured as:
   ```
   "architect": {
@@ -21,7 +21,7 @@ There are two apps available. One app uses `@angular-builders/jest:run` test bui
     }
   }
   
-### 2. configure-jest-without-angular-builders-jest
+### 2. application_configuring-jest-without-angular-builders-jest
 - It doesn't use a test builder i.e. in `angular.json`, there is no test target configured.
   ```
     "architect": {
@@ -34,6 +34,19 @@ There are two apps available. One app uses `@angular-builders/jest:run` test bui
   {
     "scripts": {
       "test": "jest"
+    }
+  }
+  ```
+
+### 3. library_configuring-jest-with-angular-builders-jest
+- Similar configuration to **(1)** `application_configuring-jest-with-angular-builders-jest`
+  
+### 4. library_configuring-jest-without-angular-builders-jest
+- Similar to **(2)** `application_configuring-jest-without-angular-builders-jest` with a small changes in the `package.json` as:
+  ```
+  {
+    "scripts": {
+      "test": "jest --config ./projects/my-org/my-lib/jest.config.js"
     }
   }
   ```
