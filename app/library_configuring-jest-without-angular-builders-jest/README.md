@@ -1,6 +1,6 @@
 # Configuring Jest without using test builder in library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 - It doesn't use a test builder i.e. in `angular.json`, there is no test target configured.
   ```
     "architect": {

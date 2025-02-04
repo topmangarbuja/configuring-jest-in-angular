@@ -1,7 +1,6 @@
 # Configuring Jest using test builder in library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
-
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 - It uses `@angular-builders/jest:run` test builder i.e. in `angular.json`, it is configured as:
   ```
   "architect": {
